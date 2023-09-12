@@ -9,8 +9,9 @@
             <div class="col-12 mt-5">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="../../index.htm">Main</a></li>
-                        <li class="breadcrumb-item" aria-current="page"><a href="../instructions.html">Instructions</a>
+                        <li class="breadcrumb-item"><a href="{{ route('home') }}">Main</a></li>
+                        <li class="breadcrumb-item" aria-current="page"><a
+                                href="{{ route('blog.instructions') }}">Instructions</a>
                         </li>
                         <li class="breadcrumb-item active" aria-current="page">What to do if your Instagram
                             account is blocked?</li>
@@ -26,7 +27,7 @@
                 <h1 class="pb-3 mb-4 border-bottom">
                     What to do if your Instagram account is blocked?
                 </h1>
-                <img src="../../images/blog/to-do-to-unlock-account/main.jpg"
+                <img src="{{ asset('images/blog/to-do-to-unlock-account/main.jpg') }}"
                     alt="What to do if your Instagram account is blocked?" class="post-main-picture">
             </div>
         </div>
@@ -52,7 +53,7 @@
 
                     <div class="row">
                         <div class="col-12 mb-3 mt-2">
-                            <img src="../../images/blog/to-do-to-unlock-account/why-question.jpg"
+                            <img src="{{ asset('images/blog/to-do-to-unlock-account/why-question.jpg') }}"
                                 class="post-image-on-full-width" alt="">
                         </div>
                     </div>
@@ -112,7 +113,7 @@
 
                     <div class="row">
                         <div class="col-12 mb-3 mt-2">
-                            <img src="../../images/blog/to-do-to-unlock-account/temporary-block.jpg"
+                            <img src="{{ asset('images/blog/to-do-to-unlock-account/temporary-block.jpg') }}"
                                 class="post-image-on-full-width" alt="">
                         </div>
                     </div>
@@ -143,7 +144,7 @@
                     <h2 class="mt-4">Actions after permanent blocking</h2>
                     <div class="row">
                         <div class="col-12 mb-3 mt-2">
-                            <img src="../../images/blog/to-do-to-unlock-account/unlock-actions.jpg"
+                            <img src="{{ asset('images/blog/to-do-to-unlock-account/unlock-actions.jpg') }}"
                                 class="post-image-on-full-width" alt="">
                         </div>
                     </div>
@@ -207,18 +208,25 @@
                     <p><strong>Similar posts</strong></p>
                     <ol class="list-unstyled mb-0">
                         <li>
-                            <a href="where-can-i-get-ideas-for-content.html">Where Can I Get Ideas for Content?</a>
+                            <a href="{{ route('blog.instructions.id', ['id' => 'where-can-i-get-ideas-for-content']) }}">Where
+                                Can I Get Ideas for Content?</a>
                         </li>
                         <li>
-                            <a href="how-to-write-engaging-posts-in-the-right-way.html">How to write engaging posts
+                            <a
+                                href="{{ route('blog.instructions.id', ['id' => 'how-to-write-engaging-posts-in-the-right-way']) }}">How
+                                to write engaging posts
                                 in the right way</a>
                         </li>
                         <li>
-                            <a href="how-to-increase-followers-reach-and-interest.html">How to Increase
+                            <a
+                                href="{{ route('blog.instructions.id', ['id' => 'how-to-increase-followers-reach-and-interest']) }}">How
+                                to Increase
                                 Followers&#039; Reach and Interest</a>
                         </li>
                         <li>
-                            <a href="how-to-design-a-profile-header-on-instagram.html">How to design a profile
+                            <a
+                                href="{{ route('blog.instructions.id', ['id' => 'how-to-design-a-profile-header-on-instagram']) }}">How
+                                to design a profile
                                 header on Instagram</a>
                         </li>
                     </ol>

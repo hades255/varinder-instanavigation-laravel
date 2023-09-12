@@ -26,7 +26,7 @@
                 <h1 class="pb-3 mb-4 border-bottom">
                     Promotion of the page from scratch
                 </h1>
-                <img src="../../images/blog/page-promotion/main.jpg" alt="Promotion of the page from scratch"
+                <img src="{{ asset('images/blog/page-promotion/main.jpg') }}" alt="Promotion of the page from scratch"
                     class="post-main-picture">
             </div>
         </div>
@@ -77,8 +77,8 @@
 
                     <div class="row">
                         <div class="col-12 mb-3 mt-2">
-                            <img src="../../images/blog/page-promotion/free-ways.jpg" class="post-image-on-full-width"
-                                alt="">
+                            <img src="{{ asset('images/blog/page-promotion/free-ways.jpg') }}"
+                                class="post-image-on-full-width" alt="">
                         </div>
                     </div>
 
@@ -147,8 +147,8 @@
 
                     <div class="row">
                         <div class="col-12 mb-3 mt-2">
-                            <img src="../../images/blog/page-promotion/not-useful-ways.jpg" class="post-image-on-full-width"
-                                alt="">
+                            <img src="{{ asset('images/blog/page-promotion/not-useful-ways.jpg') }}"
+                                class="post-image-on-full-width" alt="">
                         </div>
                     </div>
 
@@ -189,7 +189,7 @@
 
                     <div class="row">
                         <div class="col-12 mb-3 mt-2">
-                            <img src="../../images/blog/page-promotion/common-promotion-ways.jpg"
+                            <img src="{{ asset('images/blog/page-promotion/common-promotion-ways.jpg') }}"
                                 class="post-image-on-full-width">
                         </div>
                     </div>
@@ -236,15 +236,19 @@
                     <p><strong>Similar posts</strong></p>
                     <ol class="list-unstyled mb-0">
                         <li>
-                            <a href="how-to-beautifully-design-your-instagram-page.html">How to Beautifully Design
+                            <a href="{{ route('blog.tips.id', ['id' => 'how-to-beautifully-design-your-instagram-page']) }}">How
+                                to Beautifully Design
                                 Your Instagram Page?</a>
                         </li>
                         <li>
-                            <a href="how-do-i-start-blogging-on-instagram.html">How Do I Start Blogging on
+                            <a href="{{ route('blog.tips.id', ['id' => 'how-do-i-start-blogging-on-instagram']) }}">How Do I
+                                Start Blogging on
                                 Instagram?</a>
                         </li>
                         <li>
-                            <a href="where-you-can-find-bloggers-for-account-promotion.html">Where you can find
+                            <a
+                                href="{{ route('blog.tips.id', ['id' => 'where-you-can-find-bloggers-for-account-promotion']) }}">Where
+                                you can find
                                 bloggers for account promotion</a>
                         </li>
                     </ol>

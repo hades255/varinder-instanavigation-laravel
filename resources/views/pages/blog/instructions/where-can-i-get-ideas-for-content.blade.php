@@ -9,8 +9,9 @@
             <div class="col-12 mt-5">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="../../index.htm">Main</a></li>
-                        <li class="breadcrumb-item" aria-current="page"><a href="../instructions.html">Instructions</a>
+                        <li class="breadcrumb-item"><a href="{{ route('home') }}">Main</a></li>
+                        <li class="breadcrumb-item" aria-current="page"><a
+                                href="{{ route('blog.instructions') }}">Instructions</a>
                         </li>
                         <li class="breadcrumb-item active" aria-current="page">Where Can I Get Ideas for Content?
                         </li>
@@ -26,7 +27,7 @@
                 <h1 class="pb-3 mb-4 border-bottom">
                     Where Can I Get Ideas for Content?
                 </h1>
-                <img src="../../images/blog/ideas-for-content/main.jpg" alt="Where Can I Get Ideas for Content?"
+                <img src="{{ asset('images/blog/ideas-for-content/main.jpg') }}" alt="Where Can I Get Ideas for Content?"
                     class="post-main-picture">
             </div>
         </div>
@@ -68,7 +69,7 @@
                                 </li>
                             </div>
                             <div class="col-md-3 col-sm-12">
-                                <img src="../../images/blog/ideas-for-content/info.png" class="in-post-image"
+                                <img src="{{ asset('images/blog/ideas-for-content/info.png') }}" class="in-post-image"
                                     alt="">
                             </div>
                         </div>
@@ -118,7 +119,7 @@
                                 </li>
                             </div>
                             <div class="col-md-3 col-sm-12">
-                                <img src="../../images/blog/ideas-for-content/trust.png" class="in-post-image">
+                                <img src="{{ asset('images/blog/ideas-for-content/trust.png') }}" class="in-post-image">
                             </div>
                         </div>
                     </ul>
@@ -126,8 +127,8 @@
                     <h2>Where can I get ideas for posts</h2>
                     <div class="row">
                         <div class="col-12 mb-3 mt-2">
-                            <img src="../../images/blog/ideas-for-content/light-idea.jpg" class="post-image-on-full-width"
-                                alt="">
+                            <img src="{{ asset('images/blog/ideas-for-content/light-idea.jpg') }}"
+                                class="post-image-on-full-width" alt="">
                         </div>
                     </div>
 
@@ -230,19 +231,27 @@
                     <p><strong>Similar posts</strong></p>
                     <ol class="list-unstyled mb-0">
                         <li>
-                            <a href="how-to-write-engaging-posts-in-the-right-way.html">How to write engaging posts
+                            <a
+                                href="{{ route('blog.instructions.id', ['id' => 'how-to-write-engaging-posts-in-the-right-way']) }}">How
+                                to write engaging posts
                                 in the right way</a>
                         </li>
                         <li>
-                            <a href="what-to-do-if-your-instagram-account-is-blocked.html">What to do if your
+                            <a
+                                href="{{ route('blog.instructions.id', ['id' => 'what-to-do-if-your-instagram-account-is-blocked']) }}">What
+                                to do if your
                                 Instagram account is blocked?</a>
                         </li>
                         <li>
-                            <a href="how-to-increase-followers-reach-and-interest.html">How to Increase
+                            <a
+                                href="{{ route('blog.instructions.id', ['id' => 'how-to-increase-followers-reach-and-interest']) }}">How
+                                to Increase
                                 Followers&#039; Reach and Interest</a>
                         </li>
                         <li>
-                            <a href="how-to-design-a-profile-header-on-instagram.html">How to design a profile
+                            <a
+                                href="{{ route('blog.instructions.id', ['id' => 'how-to-design-a-profile-header-on-instagram']) }}">How
+                                to design a profile
                                 header on Instagram</a>
                         </li>
                     </ol>

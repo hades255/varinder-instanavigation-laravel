@@ -9,8 +9,9 @@
             <div class="col-12 mt-5">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="../../index.htm">Main</a></li>
-                        <li class="breadcrumb-item" aria-current="page"><a href="../interesting.html">Interesting</a>
+                        <li class="breadcrumb-item"><a href="{{ route('home') }}">Main</a></li>
+                        <li class="breadcrumb-item" aria-current="page"><a
+                                href="{{ route('blog.interesting') }}">Interesting</a>
                         </li>
                         <li class="breadcrumb-item active" aria-current="page">New Instagram Rules</li>
                     </ol>
@@ -25,7 +26,7 @@
                 <h1 class="pb-3 mb-4 border-bottom">
                     New Instagram Rules
                 </h1>
-                <img src="../../images/blog/new-instagram-rules/main.jpg" alt="New Instagram Rules"
+                <img src="{{ asset('images/blog/new-instagram-rules/main.jpg') }}" alt="New Instagram Rules"
                     class="post-main-picture">
             </div>
         </div>
@@ -51,7 +52,7 @@
 
                     <div class="row">
                         <div class="col-12 mb-3 mt-2">
-                            <img src="../../images/blog/new-instagram-rules/new-for-users.jpg"
+                            <img src="{{ asset('images/blog/new-instagram-rules/new-for-users.jpg') }}"
                                 class="post-image-on-full-width" alt="">
                         </div>
                     </div>
@@ -97,7 +98,7 @@
 
                     <div class="row">
                         <div class="col-12 mb-3 mt-2">
-                            <img src="../../images/blog/new-instagram-rules/european-policy.jpg"
+                            <img src="{{ asset('images/blog/new-instagram-rules/european-policy.jpg') }}"
                                 class="post-image-on-full-width" alt="">
                         </div>
                     </div>
@@ -124,28 +125,38 @@
                     <p><strong>Similar posts</strong></p>
                     <ol class="list-unstyled mb-0">
                         <li>
-                            <a href="why-instagram-can-delete-an-account.html">Why Instagram Can Delete an
+                            <a href="{{ route('blog.interesting.id', ['id' => 'why-instagram-can-delete-an-account']) }}">Why
+                                Instagram Can Delete an
                                 Account?</a>
                         </li>
                         <li>
-                            <a href="apps-and-services-for-processing-instagram-photos.html">Apps and Services for
+                            <a
+                                href="{{ route('blog.interesting.id', ['id' => 'apps-and-services-for-processing-instagram-photos']) }}">Apps
+                                and Services for
                                 Processing Instagram Photos</a>
                         </li>
                         <li>
-                            <a href="analysis-of-competitors-accounts.html">Analysis of competitors’ accounts</a>
+                            <a href="{{ route('blog.interesting.id', ['id' => 'analysis-of-competitors-accounts']) }}">Analysis
+                                of competitors’ accounts</a>
                         </li>
                         <li>
-                            <a href="effective-audit-of-the-account.html">Effective audit of the account</a>
+                            <a href="{{ route('blog.interesting.id', ['id' => 'effective-audit-of-the-account']) }}">Effective
+                                audit of the account</a>
                         </li>
                         <li>
-                            <a href="what-is-a-content-plan-of-stories-and-why-do-you-need-it.html">What is a
+                            <a
+                                href="{{ route('blog.interesting.id', ['id' => 'what-is-a-content-plan-of-stories-and-why-do-you-need-it']) }}">What
+                                is a
                                 content plan of stories and why do you need it</a>
                         </li>
                         <li>
-                            <a href="why-do-we-need-instagram.html">Why do we need Instagram?</a>
+                            <a href="{{ route('blog.interesting.id', ['id' => 'why-do-we-need-instagram']) }}">Why do we
+                                need Instagram?</a>
                         </li>
                         <li>
-                            <a href="should-you-use-reels-to-promote-your-blog.html">Should you use Reels to
+                            <a
+                                href="{{ route('blog.interesting.id', ['id' => 'should-you-use-reels-to-promote-your-blog']) }}">Should
+                                you use Reels to
                                 promote your blog?</a>
                         </li>
                     </ol>

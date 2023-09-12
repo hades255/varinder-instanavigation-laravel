@@ -26,8 +26,8 @@
                 <h1 class="pb-3 mb-4 border-bottom">
                     Where you can find bloggers for account promotion
                 </h1>
-                <img src="../../images/blog/blogger/main.jpg" alt="Where you can find bloggers for account promotion"
-                    class="post-main-picture">
+                <img src="{{ asset('images/blog/blogger/main.jpg') }}"
+                    alt="Where you can find bloggers for account promotion" class="post-main-picture">
             </div>
         </div>
 
@@ -51,8 +51,8 @@
 
                     <div class="row">
                         <div class="col-12 mb-3 mt-2">
-                            <img src="../../images/blog/blogger/ways-to-find-bloggers.jpg" class="post-image-on-full-width"
-                                alt="">
+                            <img src="{{ asset('images/blog/blogger/ways-to-find-bloggers.jpg') }}"
+                                class="post-image-on-full-width" alt="">
                         </div>
                     </div>
 
@@ -136,7 +136,7 @@
 
                     <div class="row">
                         <div class="col-12 mb-3 mt-2">
-                            <img src="../../images/blog/blogger/blogger-list.jpg" class="post-image-on-full-width"
+                            <img src="{{ asset('images/blog/blogger/blogger-list.jpg') }}" class="post-image-on-full-width"
                                 alt="">
                         </div>
                     </div>
@@ -212,15 +212,18 @@
                     <p><strong>Similar posts</strong></p>
                     <ol class="list-unstyled mb-0">
                         <li>
-                            <a href="how-to-beautifully-design-your-instagram-page.html">How to Beautifully Design
+                            <a href="{{ route('blog.tips.id', ['id' => 'how-to-beautifully-design-your-instagram-page']) }}">How
+                                to Beautifully Design
                                 Your Instagram Page?</a>
                         </li>
                         <li>
-                            <a href="how-do-i-start-blogging-on-instagram.html">How Do I Start Blogging on
+                            <a href="{{ route('blog.tips.id', ['id' => 'how-do-i-start-blogging-on-instagram']) }}">How Do I
+                                Start Blogging on
                                 Instagram?</a>
                         </li>
                         <li>
-                            <a href="promotion-of-the-page-from-scratch.html">Promotion of the page from
+                            <a href="{{ route('blog.tips.id', ['id' => 'promotion-of-the-page-from-scratch']) }}">Promotion of
+                                the page from
                                 scratch</a>
                         </li>
                     </ol>

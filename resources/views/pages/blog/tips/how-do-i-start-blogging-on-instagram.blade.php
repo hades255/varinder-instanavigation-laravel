@@ -270,15 +270,19 @@
                     <p><strong>Similar posts</strong></p>
                     <ol class="list-unstyled mb-0">
                         <li>
-                            <a href="how-to-beautifully-design-your-instagram-page.html">How to Beautifully Design
+                            <a href="{{ route('blog.tips.id', ['id' => 'how-to-beautifully-design-your-instagram-page']) }}">How
+                                to Beautifully Design
                                 Your Instagram Page?</a>
                         </li>
                         <li>
-                            <a href="promotion-of-the-page-from-scratch.html">Promotion of the page from
+                            <a href="{{ route('blog.tips.id', ['id' => 'promotion-of-the-page-from-scratch']) }}">Promotion of
+                                the page from
                                 scratch</a>
                         </li>
                         <li>
-                            <a href="where-you-can-find-bloggers-for-account-promotion.html">Where you can find
+                            <a
+                                href="{{ route('blog.tips.id', ['id' => 'where-you-can-find-bloggers-for-account-promotion']) }}">Where
+                                you can find
                                 bloggers for account promotion</a>
                         </li>
                     </ol>

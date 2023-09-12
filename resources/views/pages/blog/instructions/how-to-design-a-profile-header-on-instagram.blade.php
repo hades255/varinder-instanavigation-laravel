@@ -9,8 +9,9 @@
             <div class="col-12 mt-5">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="../../index.htm">Main</a></li>
-                        <li class="breadcrumb-item" aria-current="page"><a href="../instructions.html">Instructions</a>
+                        <li class="breadcrumb-item"><a href="{{ route('home') }}">Main</a></li>
+                        <li class="breadcrumb-item" aria-current="page"><a
+                                href="{{ route('blog.instructions') }}">Instructions</a>
                         </li>
                         <li class="breadcrumb-item active" aria-current="page">How to design a profile header on
                             Instagram</li>
@@ -26,7 +27,7 @@
                 <h1 class="pb-3 mb-4 border-bottom">
                     How to design a profile header on Instagram
                 </h1>
-                <img src="../../images/blog/how-to-design-a-profile-header-on-instagram/main.jpg"
+                <img src="{{ asset('images/blog/how-to-design-a-profile-header-on-instagram/main.jpg') }}"
                     alt="How to design a profile header on Instagram" class="post-main-picture">
             </div>
         </div>
@@ -78,7 +79,7 @@
 
                     <div class="row">
                         <div class="col-12 mb-3 mt-2">
-                            <img src="../../images/blog/how-to-design-a-profile-header-on-instagram/profile-header.jpg"
+                            <img src="{{ asset('images/blog/how-to-design-a-profile-header-on-instagram/profile-header.jpg') }}"
                                 class="post-image-on-full-width" alt="">
                         </div>
                     </div>
@@ -120,18 +121,25 @@
                     <p><strong>Similar posts</strong></p>
                     <ol class="list-unstyled mb-0">
                         <li>
-                            <a href="where-can-i-get-ideas-for-content.html">Where Can I Get Ideas for Content?</a>
+                            <a href="{{ route('blog.instructions.id', ['id' => 'where-can-i-get-ideas-for-content']) }}">Where
+                                Can I Get Ideas for Content?</a>
                         </li>
                         <li>
-                            <a href="how-to-write-engaging-posts-in-the-right-way.html">How to write engaging posts
+                            <a
+                                href="{{ route('blog.instructions.id', ['id' => 'how-to-write-engaging-posts-in-the-right-way']) }}">How
+                                to write engaging posts
                                 in the right way</a>
                         </li>
                         <li>
-                            <a href="what-to-do-if-your-instagram-account-is-blocked.html">What to do if your
+                            <a
+                                href="{{ route('blog.instructions.id', ['id' => 'what-to-do-if-your-instagram-account-is-blocked']) }}">What
+                                to do if your
                                 Instagram account is blocked?</a>
                         </li>
                         <li>
-                            <a href="how-to-increase-followers-reach-and-interest.html">How to Increase
+                            <a
+                                href="{{ route('blog.instructions.id', ['id' => 'how-to-increase-followers-reach-and-interest']) }}">How
+                                to Increase
                                 Followers&#039; Reach and Interest</a>
                         </li>
                     </ol>
