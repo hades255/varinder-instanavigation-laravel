@@ -24,7 +24,7 @@
         </div>
         <div class="row">
             <div class="col-12">
-                <ul id="myTab" role="tablist" class="nav nav-tabs mb-3">
+                <ul id="myTab" role="tablist" class="nav nav-tabs-custom mb-3">
                     <li role="presentation" class="nav-item">
                         <a href="{{ route('blog') }}" role="tab" aria-selected="true" class="nav-link active">Main</a>
                     </li>

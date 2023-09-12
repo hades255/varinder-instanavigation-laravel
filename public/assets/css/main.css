@@ -47,7 +47,8 @@
 
 body {
     font-family: 'Manrope', sans-serif;
-    color: #191a40;
+    color: #aaa;
+    background-color: #0a0a0a;
     overflow-x: hidden;
 }
 
@@ -76,6 +77,7 @@ a {
     -webkit-background-size: cover;
     background-size: cover;
     background-position: center;
+    background-color: #0a0a0a;
 }
 
 .header .menu-burger {
@@ -184,7 +186,7 @@ a {
 }
 
 .header-search__inp:focus {
-    border: 2px solid #d951fd;
+    border: 2px solid #000;
 }
 
 .header-search__btn {
@@ -291,12 +293,12 @@ a {
 }
 
 .top-block-wrapper .header-search__inp:focus {
-    border: 2px solid #d951fd !important;
+    border: 2px solid #0e0ec5 !important;
 }
 
 .top-block-wrapper .header-search__inp, .content-block-wrapper .header-search__inp {
-    border: 2px solid #0e0ec5;
-    color: black;
+    border: 2px solid #aaa;
+    color: white;
 }
 
 .content-block-wrapper img {
@@ -346,7 +348,7 @@ a {
     padding: 0.75rem 1rem;
     margin-bottom: 1rem;
     list-style: none;
-    background-color: #e9ecef;
+    background-color: #333;
     border-radius: 0.25rem;
 }
 
@@ -362,7 +364,7 @@ a {
 }
 
 .top-block-wrapper .header-search__inp::placeholder, .content-block-wrapper .header-search__inp::placeholder {
-    color: black;
+    color: #aaa;
 }
 
 .lang li {
@@ -842,7 +844,6 @@ h2.advantages__sub-title, .advantages__sub-title {
 
 .popular__title {
     text-align: center;
-    color: #191a40;
     font-size: 60px;
     font-weight: 500;
     margin-bottom: 80px;
@@ -890,10 +891,10 @@ h2.advantages__sub-title, .advantages__sub-title {
     text-decoration: none;
     color: #fff;
     background: #a68efe;
-    background: -webkit-gradient(linear, left top, right top, from(#a68efe), color-stop(56%, #d657fe), color-stop(78%, #5688fe), color-stop(95%, #8c39ff));
-    background: -webkit-linear-gradient(left, #a68efe 0%, #d657fe 56%, #5688fe 78%, #8c39ff 95%);
-    background: -o-linear-gradient(left, #a68efe 0%, #d657fe 56%, #5688fe 78%, #8c39ff 95%);
-    background: linear-gradient(90deg, #a68efe 0%, #d657fe 56%, #5688fe 78%, #8c39ff 95%);
+    background: -webkit-gradient(linear, left top, right top, from(#333), color-stop(56%, #aaa), color-stop(78%, #555), color-stop(95%, #333));
+    background: -webkit-linear-gradient(left, #333 0%, #aaa 56%, #555 78%, #333 95%);
+    background: -o-linear-gradient(left, #333 0%, #aaa 56%, #555 78%, #333 95%);
+    background: linear-gradient(90deg, #333 0%, #aaa 56%, #555 78%, #333 95%);
 }
 
 .popular-card-img-head:hover {
@@ -931,7 +932,6 @@ h2.advantages__sub-title, .advantages__sub-title {
 .popular-card__title {
     font-size: 22px;
     font-weight: 700;
-    color: #191a40;
     text-decoration: none;
     margin: 20px 0 25px;
     display: block;
@@ -942,7 +942,6 @@ h2.advantages__sub-title, .advantages__sub-title {
 }
 
 .popular-card__text {
-    color: #191a40;
     font-size: 20px;
 }
 
@@ -1625,6 +1624,7 @@ p.biography {
 
 .nav-tabs-custom .nav-item .nav-link {
     border: none;
+    color: #aaa;
 }
 
 .text-muted {
@@ -1838,4 +1838,17 @@ p.biography {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+}
+
+
+.card{
+    border: 0;
+    border-radius: 5%;
+    box-shadow: 1px 1px 5px #555;
+}
+.card-body{
+    background-color: #0a0a0a;
+}
+.post-header{
+    color: #666 !important;
 }

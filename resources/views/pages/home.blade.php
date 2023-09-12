@@ -22,7 +22,8 @@
                                 aware of it, allowing you to stay updated on interesting
                                 news and download relevant content as well.
                             </p>
-                            <img loading="lazy" src="{{ asset('assets/img/png/cube.png') }}" alt="cube.png" class="cube1 position-absolute" />
+                            <img loading="lazy" src="{{ asset('assets/img/png/cube.png') }}" alt="cube.png"
+                                class="cube1 position-absolute" />
                         </div>
                     </div>
                     <div class="row mt-5">
@@ -68,10 +69,13 @@
                         </div>
                         <div class="col-lg-7 ps-5 col-12 justify-content-center justify-content-lg-center mt-5 mt-lg-0">
                             <div class="ellipse">
-                                <img loading="lazy" src="{{ asset('assets/img/png/e1.png') }}" alt="" class="e1" />
-                                <img loading="lazy" src="{{ asset('assets/img/png/e2.png') }}" alt="" class="e2" />
+                                <img loading="lazy" src="{{ asset('assets/img/png/e1.png') }}" alt=""
+                                    class="e1" />
+                                <img loading="lazy" src="{{ asset('assets/img/png/e2.png') }}" alt=""
+                                    class="e2" />
                                 <div class="ellipse-item">
-                                    <img loading="lazy" src="{{ asset('assets/img/png/c1.png') }}" alt="" class="c1" />
+                                    <img loading="lazy" src="{{ asset('assets/img/png/c1.png') }}" alt=""
+                                        class="c1" />
                                 </div>
                             </div>
                         </div>
@@ -91,10 +95,13 @@
                         <div
                             class="col-lg-6 ps-lg-5 col-12 d-flex justify-content-center justify-content-lg-center mt-5 mt-lg-0">
                             <div class="ellipse ellipse2">
-                                <img loading="lazy" src="{{ asset('assets/img/png/e3.png') }}" alt="" class="e3" />
-                                <img loading="lazy" src="{{ asset('assets/img/png/e4.png') }}" alt="" class="e4" />
+                                <img loading="lazy" src="{{ asset('assets/img/png/e3.png') }}" alt=""
+                                    class="e3" />
+                                <img loading="lazy" src="{{ asset('assets/img/png/e4.png') }}" alt=""
+                                    class="e4" />
                                 <div class="ellipse-item">
-                                    <img loading="lazy" src="{{ asset('assets/img/png/c2.png') }}" alt="" class="c1" />
+                                    <img loading="lazy" src="{{ asset('assets/img/png/c2.png') }}" alt=""
+                                        class="c1" />
                                 </div>
                             </div>
                         </div>
@@ -115,17 +122,23 @@
                         </div>
                         <div class="col-lg-7 ps-lg-5 col-12 mt-5 mt-lg-0">
                             <div class="ellipse ellipse3">
-                                <img loading="lazy" src="{{ asset('assets/img/png/e5.png') }}" alt="" class="e5" />
-                                <img loading="lazy" src="{{ asset('assets/img/png/e6.png') }}" alt="" class="e6" />
-                                <img loading="lazy" src="{{ asset('assets/img/png/e7.png') }}" alt="" class="e7" />
+                                <img loading="lazy" src="{{ asset('assets/img/png/e5.png') }}" alt=""
+                                    class="e5" />
+                                <img loading="lazy" src="{{ asset('assets/img/png/e6.png') }}" alt=""
+                                    class="e6" />
+                                <img loading="lazy" src="{{ asset('assets/img/png/e7.png') }}" alt=""
+                                    class="e7" />
                                 <div class="ellipse-item camera">
-                                    <img loading="lazy" src="{{ asset('assets/img/png/c4.png') }}" alt="" class="c4" />
+                                    <img loading="lazy" src="{{ asset('assets/img/png/c4.png') }}" alt=""
+                                        class="c4" />
                                 </div>
                                 <div class="ellipse-item media">
-                                    <img loading="lazy" src="{{ asset('assets/img/png/c3.png') }}" alt="" class="c3" />
+                                    <img loading="lazy" src="{{ asset('assets/img/png/c3.png') }}" alt=""
+                                        class="c3" />
                                 </div>
                                 <div class="ellipse-item save">
-                                    <img loading="lazy" src="{{ asset('assets/img/png/c5.png') }}" alt="" class="c3" />
+                                    <img loading="lazy" src="{{ asset('assets/img/png/c5.png') }}" alt=""
+                                        class="c3" />
                                 </div>
                             </div>
                         </div>
@@ -258,20 +271,20 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h3 class="popular__title">Popular posts</h3>
+                        <h3 class="popular__title text-white-50">Popular posts</h3>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-4 col-md-6">
                         <div class="popular-card">
                             <div class="popular-card-img">
-                                <a href="blog/instructions/how-to-design-a-profile-header-on-instagram.html"
+                                <a href="{{ route('blog.instructions.id', ['id' => 'how-to-design-a-profile-header-on-instagram']) }}"
                                     class="popular-card-img-head">Instructions</a>
                                 <img class="card-img-top lazy" alt="How to design a profile header on Instagram"
                                     data-src="images/blog/how-to-design-a-profile-header-on-instagram/main.jpg"
-                                    src="images/lazy.jpg" data-holder-rendered="true" />
+                                    src="{{ asset('images/lazy.jpg') }}" data-holder-rendered="true" />
                             </div>
-                            <a href="blog/instructions/how-to-design-a-profile-header-on-instagram.html"
+                            <a href="{{ route('blog.instructions.id', ['id' => 'how-to-design-a-profile-header-on-instagram']) }}"
                                 class="popular-card__title">How to design a profile header on Instagram</a>
                             <p class="popular-card__text">
                                 If the profile header is incorrectly designed, you can lose
@@ -285,13 +298,14 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="popular-card">
                             <div class="popular-card-img">
-                                <a href="blog/interesting/new-instagram-rules.html"
+                                <a href="{{ route('blog.interesting.id', ['id' => 'new-instagram-rules']) }}"
                                     class="popular-card-img-head">Interesting</a>
                                 <img class="card-img-top lazy" alt="New Instagram Rules"
-                                    data-src="images/blog/new-instagram-rules/main.jpg" src="images/lazy.jpg"
-                                    data-holder-rendered="true" />
+                                    data-src="images/blog/new-instagram-rules/main.jpg"
+                                    src="{{ asset('images/lazy.jpg') }}" data-holder-rendered="true" />
                             </div>
-                            <a href="blog/interesting/new-instagram-rules.html" class="popular-card__title">New Instagram
+                            <a href="{{ route('blog.interesting.id', ['id' => 'new-instagram-rules']) }}"
+                                class="popular-card__title">New Instagram
                                 Rules</a>
                             <p class="popular-card__text">
                                 In social networks, there is always a section that describes
@@ -305,13 +319,13 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="popular-card">
                             <div class="popular-card-img">
-                                <a href="blog/instructions/how-to-increase-followers-reach-and-interest.html"
+                                <a href="{{ route('blog.instructions.id', ['id' => 'how-to-increase-followers-reach-and-interest']) }}"
                                     class="popular-card-img-head">Instructions</a>
                                 <img class="card-img-top lazy" alt="How to Increase Followers&#039; Reach and Interest"
-                                    data-src="images/blog/increase-subscribers/main.jpg" src="images/lazy.jpg"
-                                    data-holder-rendered="true" />
+                                    data-src="images/blog/increase-subscribers/main.jpg"
+                                    src="{{ asset('images/lazy.jpg') }}" data-holder-rendered="true" />
                             </div>
-                            <a href="blog/instructions/how-to-increase-followers-reach-and-interest.html"
+                            <a href="{{ route('blog.instructions.id', ['id' => 'how-to-increase-followers-reach-and-interest']) }}"
                                 class="popular-card__title">How to Increase Followers' Reach and Interest</a>
                             <p class="popular-card__text">
                                 Since Instagram introduced new features and rules, promoting

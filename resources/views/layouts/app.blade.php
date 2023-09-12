@@ -10,7 +10,9 @@
     <meta name="description"
         content="View Instagram stories anonymously without registration. View profiles, highlights, posts, comments in one place." />
     <link href="{{ asset('npm/bootstrap.min.css') }}" rel="stylesheet" />
+
     <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}" />
+    
     <link rel="stylesheet" href="{{ asset('font-awesome/5.15.3/css/all.min.css') }}" referrerpolicy="no-referrer" />
     <!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
           />
@@ -73,6 +75,7 @@
     </script>
     <script src="{{ asset('ads/system/context.js') }}" async></script>
     <title>@yield('title')</title>
+    
 </head>
 
 <body class="d-flex flex-column min-vh-100">
