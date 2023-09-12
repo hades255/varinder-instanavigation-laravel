@@ -14,13 +14,13 @@
                 <div class="col-lg-7 col-md-6">
                     <ul class="justify-content-between align-items-center d-none d-lg-flex">
                         <li class="nav-list">
-                            <a href="view-instagram-stories.html" class="nav-list__link">View stories</a>
+                            <a href="{{ route('view-instagram-stories') }}" class="nav-list__link">View stories</a>
                         </li>
                         <!--                        <li class="nav-list"><a href="https://instanavigation.com/popular-users"
                                           class="nav-list__link">Popular users</a>
                   </li>-->
                         <li class="nav-list">
-                            <a href="blog.html" class="nav-list__link">Blog</a>
+                            <a href="{{ route('blog') }}" class="nav-list__link">Blog</a>
                         </li>
                         <li class="lang">
                             <span class="lang-active">en</span>

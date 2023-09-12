@@ -19,16 +19,16 @@
                     <ul
                         class="justify-content-between align-items-start align-items-lg-center d-flex flex-column flex-lg-row">
                         <li class="nav-list">
-                            <a href="about-project.html" class="nav-list__link">About us</a>
+                            <a href="{{ route('about-project') }}" class="nav-list__link">About us</a>
                         </li>
                         <li class="nav-list">
-                            <a href="blog.html" class="nav-list__link">Blog</a>
+                            <a href="{{ route('blog') }}" class="nav-list__link">Blog</a>
                         </li>
                         <li class="nav-list">
-                            <a href="features.html" class="nav-list__link">Features</a>
+                            <a href="{{ route('features') }}" class="nav-list__link">Features</a>
                         </li>
                         <li class="nav-list">
-                            <a href="contact-us.html" class="nav-list__link">Contacts</a>
+                            <a href="{{ route('contact-us') }}" class="nav-list__link">Contacts</a>
                         </li>
                     </ul>
                 </div>

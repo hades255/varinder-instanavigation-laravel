@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="yandex-verification" content="c3286cb4719c914f" />
-    <meta name="csrf-token" content="zF0r3Uko6DpXgxPcqS8cnzjjyylZre8oJ5iOxGP0" />
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    <link rel="canonical" href="https://instanavigation.com" />
+    <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon" />
+    <link rel="canonical" href="https://instanavigation.com/view-instagram-stories" />
     <meta name="description"
-        content="View and download instagram stories anonymously. View instagram profile without registration. Daily stories, posts, igtv." />
+        content="View Instagram stories anonymously without registration. View profiles, highlights, posts, comments in one place." />
     <link href="{{ asset('npm/bootstrap.min.css') }}" rel="stylesheet" />
     <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}" />
+    <link rel="stylesheet" href="{{ asset('font-awesome/5.15.3/css/all.min.css') }}" referrerpolicy="no-referrer" />
     <!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
           />
     <link rel="stylesheet" href="https://instanavigation.com/css/socialstory.css?v1">
@@ -56,7 +56,8 @@
     </script>
     <noscript>
         <div>
-            <img src="{{ asset('assets/img/watch/74856667.gif') }}" style="position: absolute; left: -9999px" alt="" />
+            <img src="{{ asset('assets/img/watch/74856667.gif') }}" style="position: absolute; left: -9999px"
+                alt="" />
         </div>
     </noscript>
     <!-- /Yandex.Metrika counter -->
@@ -67,6 +68,10 @@
         <script src="https://yandex.ru/ads/system/context.js" async></script>-->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8482438505165967">
     </script>
+    <script>
+        window.yaContextCb = window.yaContextCb || [];
+    </script>
+    <script src="{{ asset('ads/system/context.js') }}" async></script>
     <title>@yield('title')</title>
 </head>
 
