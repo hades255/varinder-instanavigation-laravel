@@ -3,7 +3,8 @@
             <div class="row my-5 d-lg-none">
                 <div class="col-sm-8">
                     <div class="d-flex align-items-center">
-                        <img loading="lazy" src="assets/img/png/logo-new.png" alt="logo.png" class="me-2 footer__logo" />
+                        <img loading="lazy" src="{{ asset('assets/img/png/logo-new.png') }}" alt="logo.png"
+                            class="me-2 footer__logo" />
                         <div class="text-white">
                             <p class="footer__logo-text">
                                 The site is a fan page. InstaNavigation.com is not connected
@@ -59,7 +60,7 @@
             <div class="row my-5 d-none d-lg-flex">
                 <div class="col-lg-6">
                     <div class="d-flex align-items-center">
-                        <img loading="lazy" src="assets/img/png/logo-new.png" alt="logo.png"
+                        <img loading="lazy" src="{{ asset('assets/img/png/logo-new.png') }}" alt="logo.png"
                             class="me-2 footer__logo" />
                         <div class="text-white">
                             <p class="footer__logo-text">
