@@ -2,6 +2,23 @@
 
 @section('title', 'InstaNavigation blog - Tips how to make Instagram features better')
 
+@push('style')
+    <style>
+        .card {
+            border: 0;
+            border-radius: 5%;
+            box-shadow: 1px 1px 5px #555;
+        }
+
+        .card-body {
+            background-color: #0a0a0a;
+        }
+
+        .post-header {
+            color: #666 !important;
+        }
+    </style>
+@endpush
 @section('content')
 
     <div class="container blog-wrapper mb-4">

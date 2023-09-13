@@ -12,14 +12,15 @@
     <link href="{{ asset('npm/bootstrap.min.css') }}" rel="stylesheet" />
 
     <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}" />
-    
+
     <link rel="stylesheet" href="{{ asset('font-awesome/5.15.3/css/all.min.css') }}" referrerpolicy="no-referrer" />
     <!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
           />
     <link rel="stylesheet" href="https://instanavigation.com/css/socialstory.css?v1">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">-->
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0JTJC26W3L"></script>
+    <script async="" src="{{ asset('gtag/js?id=G-0JTJC26W3L') }}"></script>
+    {{-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-0JTJC26W3L"></script> --}}
     <script>
         window.dataLayer = window.dataLayer || [];
 
@@ -75,7 +76,8 @@
     </script>
     <script src="{{ asset('ads/system/context.js') }}" async></script>
     <title>@yield('title')</title>
-    
+
+    @stack('style')
 </head>
 
 <body class="d-flex flex-column min-vh-100">
@@ -95,7 +97,11 @@
     @include('layouts.footer')
 
     <script src="{{ asset('npm/jquery-3.6.1.min.js') }}"></script>
-    <script src="{{ asset('assets/js/home.js') }}"></script>
+
+
+    @stack('scripts')
+
+
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             let lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
@@ -119,6 +125,8 @@
             } else {}
         });
     </script>
+
+
     <!-- JavaScript Bundle with Popper -->
     <!--    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
@@ -132,6 +140,7 @@
             $(this).toggleClass("activeFaq");
         });
     </script>
+
 </body>
 
 </html>

@@ -2,10 +2,17 @@
 
 @section('title', 'Contact us - service InstaNavigation')
 
+@push('style')
+    <style>
+        .form-control, .form-control:focus{
+            color: white
+        }
+    </style>
+@endpush
 @section('content')
 
     <div class="container">
-        <div class="card mt-5 mb-3">
+        <div class="card mt-5 mb-3 bg-dark text-white">
             <div class="card-header">
                 <h1 class="contact-us-header">Contact Us</h1>
             </div>
@@ -24,19 +31,19 @@
                     <input type="hidden" name="_token" value="AyzOPEGNhue2pZMyX8ouAwHckyG48QMrSmAJeUW6" />
                     <div class="form-group mb-3">
                         <label for="name">Name</label>
-                        <input type="text" class="form-control" required="" id="name" name="name"
+                        <input type="text" class="form-control bg-transparent" required="" id="name" name="name"
                             value="" placeholder="Enter name" />
                     </div>
                     <div class="form-group mb-3">
                         <label for="email">Email</label>
-                        <input type="email" class="form-control" required="" id="email" name="email"
+                        <input type="email" class="form-control bg-transparent" required="" id="email" name="email"
                             value="" placeholder="Enter email" />
                     </div>
                     <div class="form-group mb-3">
                         <label for="message">Message</label>
-                        <textarea class="form-control" name="message" required="" id="message" rows="3" placeholder="Enter message"></textarea>
+                        <textarea class="form-control bg-transparent" name="message" required="" id="message" rows="3" placeholder="Enter message"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-success submit-contact-us-form">
+                    <button type="submit" class="btn btn-secondary submit-contact-us-form">
                         Submit
                     </button>
                 </form>

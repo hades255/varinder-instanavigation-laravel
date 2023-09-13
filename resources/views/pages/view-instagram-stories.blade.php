@@ -17,28 +17,6 @@
                         locale="en"></user-search>
                 </div>
             </div>
-            <div class="row justify-content-center mt-2">
-                <div class="col-11 mb-4">
-                    <div class="col-12">
-                        <div class="text-center">
-                            <span
-                                style="
-                  display: inline-block;
-                  background: #ce00ff;
-                  color: white;
-                  padding: 5px 13px;
-                  font-size: 18px;
-                ">Advertisements</span>
-                        </div>
-                        <!-- View stories page -->
-                        <ins class="adsbygoogle" style="display: block" data-ad-client="ca-pub-8482438505165967"
-                            data-ad-slot="3931496835" data-ad-format="auto" data-full-width-responsive="true"></ins>
-                        <script>
-                            (adsbygoogle = window.adsbygoogle || []).push({});
-                        </script>
-                    </div>
-                </div>
-            </div>
         </div>
         <div class="content-block-wrapper mb-5">
             <div class="row justify-content-center">

@@ -80,9 +80,9 @@
                 </div>
                 <div
                     class="col-md-8 d-flex justify-content-md-end justify-content-center align-items-center flex-wrap mb-4 mb-md-0">
-                    <a href="terms-of-use.html" class="footer__link text-white fw-normal me-0 me-sm-5">Terms &
+                    <a href="{{ route('terms-of-use') }}" class="footer__link text-white fw-normal me-0 me-sm-5">Terms &
                         Conditions</a>
-                    <a href="privacy-policy.html" class="footer__link text-white fw-normal">Privacy policy</a>
+                    <a href="{{ route('privacy-policy') }}" class="footer__link text-white fw-normal">Privacy policy</a>
                 </div>
             </div>
         </div>

@@ -2,6 +2,24 @@
 
 @section('title', 'View Instagram stories anonymously - Instagram story viewer')
 
+@push('style')
+    <style>
+        .card {
+            border: 0;
+            border-radius: 5%;
+            box-shadow: 1px 1px 5px #555;
+        }
+
+        .card-body {
+            background-color: #0a0a0a;
+        }
+
+        .post-header {
+            color: #666 !important;
+        }
+    </style>
+@endpush
+
 @section('content')
 
     <div class="container blog-wrapper mb-4">
@@ -256,7 +274,8 @@
             </div>
             <div class="col-md-4">
                 <div class="card mb-4 box-shadow">
-                    <a href="{{ route('blog.instructions.id', ['id' => 'how-to-write-engaging-posts-in-the-right-way']) }}">
+                    <a
+                        href="{{ route('blog.instructions.id', ['id' => 'how-to-write-engaging-posts-in-the-right-way']) }}">
                         <img class="card-img-top" alt="How to write engaging posts in the right way"
                             src="{{ asset('images/blog/write-interesting-posts/main.jpg') }}"
                             data-holder-rendered="true" />
@@ -373,7 +392,8 @@
             </div>
             <div class="col-md-4">
                 <div class="card mb-4 box-shadow">
-                    <a href="{{ route('blog.instructions.id', ['id' => 'how-to-increase-followers-reach-and-interest']) }}">
+                    <a
+                        href="{{ route('blog.instructions.id', ['id' => 'how-to-increase-followers-reach-and-interest']) }}">
                         <img class="card-img-top" alt="How to Increase Followers&#039; Reach and Interest"
                             src="{{ asset('images/blog/increase-subscribers/main.jpg') }}" data-holder-rendered="true" />
                     </a>
@@ -418,7 +438,8 @@
             </div>
             <div class="col-md-4">
                 <div class="card mb-4 box-shadow">
-                    <a href="{{ route('blog.instructions.id', ['id' => 'how-to-design-a-profile-header-on-instagram']) }}">
+                    <a
+                        href="{{ route('blog.instructions.id', ['id' => 'how-to-design-a-profile-header-on-instagram']) }}">
                         <img class="card-img-top" alt="How to design a profile header on Instagram"
                             src="{{ asset('images/blog/how-to-design-') }}a-profile-header-on-instagram/main.jpg"
                             data-holder-rendered="true" />

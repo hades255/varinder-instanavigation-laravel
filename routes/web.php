@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProfileCtr;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -37,6 +38,14 @@ Route::get('/contact-us', function () {
     return view('pages.contact-us');
 })->name('contact-us');
 
+Route::get('/terms-of-use', function () {
+    return view('pages.terms-of-use');
+})->name('terms-of-use');
+
+Route::get('/privacy-policy', function () {
+    return view('pages.privacy-policy');
+})->name('privacy-policy');
+
 /***************************************************************************    blog */
 
 Route::get('/blog/interesting', function () {
@@ -45,7 +54,7 @@ Route::get('/blog/interesting', function () {
 
 Route::get('/blog/interesting/{id}', function ($id) {
     return view('pages.blog.interesting.' . $id);
-})->name('blog.interesting.id');
+})->name('blog.interesting.id')->where('id', '.*');
 /************************************************ */
 Route::get('/blog/instructions', function () {
     return view('pages.blog.instructions');
@@ -53,7 +62,7 @@ Route::get('/blog/instructions', function () {
 
 Route::get('/blog/instructions/{id}', function ($id) {
     return view('pages.blog.instructions.' . $id);
-})->name('blog.instructions.id');
+})->name('blog.instructions.id')->where('id', '.*');
 /************************************************ */
 Route::get('/blog/tips', function () {
     return view('pages.blog.tips');
@@ -61,4 +70,7 @@ Route::get('/blog/tips', function () {
 
 Route::get('/blog/tips/{id}', function ($id) {
     return view('pages.blog.tips.' . $id);
-})->name('blog.tips.id');
+})->name('blog.tips.id')->where('id', '.*');
+
+/***************************************************************************    view */
+Route::get('/user-profile/{id}', [ProfileCtr::class, 'index'])->name('user-profile');

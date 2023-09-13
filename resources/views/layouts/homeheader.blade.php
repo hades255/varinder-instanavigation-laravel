@@ -71,13 +71,6 @@
                                 (adsbygoogle = window.adsbygoogle || []).push({});
                             </script>
                         </div>
-                        <!--                                <div class="col-10" style="min-height: 250px">
-                                                              &lt;!&ndash; PixFuture Display Ad Tag &ndash;&gt;
-                                                              <div id="27783x970x250x4644x_ADSLOT3" class="desktop-ad"
-                                                                   clickTrack="%%CLICK_URL_ESC%%"></div>
-                                                              <script async type="text/javascript" src="https://served-by.pixfuture.com/www/delivery/headerbid.js"
-                                                                  slot_id="27783x970x250x4644x_ADSLOT3"></script>
-                                                          </div>-->
                     </div>
                 </div>
             </div>
