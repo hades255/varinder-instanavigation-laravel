@@ -1175,6 +1175,7 @@ h2.advantages__sub-title,
 .profile .anonymous-browsing {
     padding: 5px 15px;
     background: #43ecd2;
+    color: white;
     -webkit-border-radius: 20px;
     border-radius: 20px;
     width: auto;

@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\HighlightCtr;
+use App\Http\Controllers\MediaCommentsCtr;
 use App\Http\Controllers\ProfileCtr;
 use Illuminate\Support\Facades\Route;
 
@@ -74,3 +76,7 @@ Route::get('/blog/tips/{id}', function ($id) {
 
 /***************************************************************************    view */
 Route::get('/user-profile/{id}', [ProfileCtr::class, 'index'])->name('user-profile');
+
+Route::post('/get-highlight-stories', [HighlightCtr::class, 'index']);
+
+Route::post('/get-media-comments', [MediaCommentsCtr::class, 'index']);
