@@ -25,11 +25,11 @@
                         <li class="lang">
                             <span class="lang-active">en</span>
                             <ul class="lang-menu">
-                                <li><a class="lang-item" href="de.html">de</a></li>
-                                <li><a class="lang-item" href="index.html">en</a></li>
-                                <li><a class="lang-item" href="fr.html">fr</a></li>
-                                <li><a class="lang-item" href="it.html">it</a></li>
-                                <li><a class="lang-item" href="ru.html">ru</a></li>
+                                <li><a class="lang-item" href="#">de</a></li>
+                                <li><a class="lang-item" href="#">en</a></li>
+                                <li><a class="lang-item" href="#">fr</a></li>
+                                <li><a class="lang-item" href="#">it</a></li>
+                                <li><a class="lang-item" href="#">ru</a></li>
                             </ul>
                         </li>
                     </ul>

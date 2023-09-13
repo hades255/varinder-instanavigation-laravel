@@ -11,15 +11,30 @@ class ProfileCtr extends Controller
     {
         $accessToken = env('YOUR_ACCESS_TOKEN', 'YOUR_ACCESS_TOKEN');
 
-        // $response = Http::get("https://graph.facebook.com/{$request->id}", [
+        // $userInfo = Http::get("https://graph.facebook.com/{$request->id}", [
         //     'access_token' => $accessToken,
         //     'fields' => 'id,name,email,profile_picture'
-        // ]);
+        // ])->json();
 
-        // $userData = $response->json();
-        // $userName = $userData['name'];
-        // $userEmail = $userData['email'];
-        // $userProfilePicture = $userData['profile_picture'];
+        // $posts = Http::get('https://graph.facebook.com/{$request->id}/posts', [
+        //     'access_token' => $accessToken,
+        // ])->json();
+        
+        // // Retrieve user's highlights
+        // $highlights = Http::get('https://graph.facebook.com/{$request->id}/highlights', [
+        //     'access_token' => $accessToken,
+        // ])->json();
+
+        // $response = Http::get("https://graph.facebook.com/v13.0/{$userId}/friends", [
+        //     'access_token' => $accessToken,
+        // ]);
+        // $friendCount = $response->json()['summary']['total_count'];
+
+        // $response = Http::get("https://graph.facebook.com/{$userId}/followers", [
+        //     'access_token' => $userAccessToken,
+        // ]);
+        // $followerCount = $response->json()['summary']['total_count'];
+
         /*
         const x = {
             "user-info": {

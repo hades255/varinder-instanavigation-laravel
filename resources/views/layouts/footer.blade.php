@@ -34,7 +34,7 @@
                     </ul>
                 </div>
                 <div class="col-md-3 col-5 d-flex align-items-center justify-content-end">
-                    <a href="view-instagram-stories.html" class="footer-search">
+                    <a href="{{ route('view-instagram-stories') }}" class="footer-search">
                         <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                             viewBox="0 0 487.95 487.95" style="enable-background: new 0 0 487.95 487.95"
@@ -48,11 +48,11 @@
                     <div class="lang">
                         <span class="lang-active">en</span>
                         <ul class="lang-menu">
-                            <li><a class="lang-item" href="de.html">de</a></li>
-                            <li><a class="lang-item" href="index.html">en</a></li>
-                            <li><a class="lang-item" href="fr.html">fr</a></li>
-                            <li><a class="lang-item" href="it.html">it</a></li>
-                            <li><a class="lang-item" href="ru.html">ru</a></li>
+                            <li><a class="lang-item" href="#">de</a></li>
+                            <li><a class="lang-item" href="#">en</a></li>
+                            <li><a class="lang-item" href="#">fr</a></li>
+                            <li><a class="lang-item" href="#">it</a></li>
+                            <li><a class="lang-item" href="#">ru</a></li>
                         </ul>
                     </div>
                 </div>

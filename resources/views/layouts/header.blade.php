@@ -26,19 +26,19 @@
                             <span class="lang-active">en</span>
                             <ul class="lang-menu">
                                 <li>
-                                    <a class="lang-item" href="de/view-instagram-stories.html">de</a>
+                                    <a class="lang-item" href="#">de</a>
                                 </li>
                                 <li>
-                                    <a class="lang-item" href="view-instagram-stories.html">en</a>
+                                    <a class="lang-item" href="#">en</a>
                                 </li>
                                 <li>
-                                    <a class="lang-item" href="fr/view-instagram-stories.html">fr</a>
+                                    <a class="lang-item" href="#">fr</a>
                                 </li>
                                 <li>
-                                    <a class="lang-item" href="it/view-instagram-stories.html">it</a>
+                                    <a class="lang-item" href="#">it</a>
                                 </li>
                                 <li>
-                                    <a class="lang-item" href="ru/view-instagram-stories.html">ru</a>
+                                    <a class="lang-item" href="#">ru</a>
                                 </li>
                             </ul>
                         </li>
