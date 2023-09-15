@@ -12,53 +12,53 @@ Another feature of InstaNavigation is that you don't need to first log into your
 
 On the one hand, it serves as an additional security measure, as if you don't enter any data, you don't have to worry about it being disclosed. On the other hand, it allows users who are not registered on Instagram to also view interesting pages on the social network.
 
-<div style="display: flex;">
-    <div style="width: 50%">
+<span style="display: flex;">
+    <span style="width: 50%">
         <img src="./public/ss/Screenshot_2.png" alt="screenshot" />
-    </div>
-    <div style="width: 50%;">
-        <div style="display: flex;">
-            <div style="width: 50%">
+    </span>
+    <span style="width: 50%;">
+        <span style="display: flex;">
+            <span style="width: 50%">
                 <img src="./public/ss/Screenshot_1.png" alt="screenshot" />
-            </div>
-            <div style="width: 50%; display: flex;">
+            </span>
+            <span style="width: 50%; display: flex;">
                 <img src="./public/ss/Screenshot_3.png" alt="screenshot" />
-            </div>
-        </div>
-        <div style="display: flex;">
-            <div style="width: 50%">
+            </span>
+        </span>
+        <span style="display: flex;">
+            <span style="width: 50%">
                 <img src="./public/ss/Screenshot_9.png" alt="screenshot" />
-            </div>
-            <div style="width: 50%; display: flex;">
+            </span>
+            <span style="width: 50%; display: flex;">
                 <img src="./public/ss/Screenshot_4.png" alt="screenshot" />
-            </div>
-        </div>
-    </div>
-</div>
+            </span>
+        </span>
+    </span>
+</span>
 <i>Modern Dark Theme</i>
-<div style="display: flex;">
-    <div style="width: 50%">
+<span style="display: flex;">
+    <span style="width: 50%">
         <img src="./public/ss/Screenshot_8.png" alt="screenshot" />
-    </div>
-    <div style="width: 50%;">
-        <div style="display: flex;">
-            <div style="width: 50%">
+    </span>
+    <span style="width: 50%;">
+        <span style="display: flex;">
+            <span style="width: 50%">
                 <img src="./public/ss/Screenshot_5.png" alt="screenshot" />
-            </div>
-            <div style="width: 50%; display: flex;">
+            </span>
+            <span style="width: 50%; display: flex;">
                 <img src="./public/ss/Screenshot_6.png" alt="screenshot" />
-            </div>
-        </div>
-        <div style="display: flex;">
-            <div style="width: 50%">
+            </span>
+        </span>
+        <span style="display: flex;">
+            <span style="width: 50%">
                 <img src="./public/ss/Screenshot_7.png" alt="screenshot" />
-            </div>
-            <div style="width: 50%; display: flex;">
+            </span>
+            <span style="width: 50%; display: flex;">
                 <img src="./public/ss/Screenshot_10.png" alt="screenshot" />
-            </div>
-        </div>
-    </div>
-</div>
+            </span>
+        </span>
+    </span>
+</span>
 
 ## Set up
 
