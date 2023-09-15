@@ -5,36 +5,68 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 
+use Facebook\Facebook;
+
 class ProfileCtr extends Controller
 {
+
+    public function getFacebookInfo($name)
+    {
+        $access_token = env('YOUR_ACCESS_TOKEN', 'YOUR_ACCESS_TOKEN');
+        $app_id = env('YOUR_APP_ID', 'YOUR_APP_ID');
+        $app_secret = env('YOUR_APP_SECRET', 'YOUR_APP_SECRET');
+
+        // Initialize the Facebook SDK
+        $fb = new Facebook([
+            'app_id' => $app_id,
+            'app_secret' => $app_secret,
+            'default_graph_version' => 'v13.0',
+        ]);
+
+        try {
+            // Get the user profile information
+            $response = $fb->get('/' . $name . '?fields=id,username,full_name,profile_picture_url,biography,follows_count,followed_by_count,media_count,is_private', $access_token);
+            $userInfo = $response->getGraphNode()->asArray();
+
+            // Get the highlights
+            $response = $fb->get('/' . $name . '/highlights?fields=id,title,image_thumbnail', $access_token);
+            $highlights = $response->getGraphEdge()->asArray();
+
+            // Get the last stories
+            $response = $fb->get('/' . $name . '/stories?fields=created_time,type,thumbnail_url', $access_token);
+            $lastStories = $response->getGraphEdge()->asArray();
+
+            // Get the posts
+            $response = $fb->get('/' . $name . '/posts?fields=id,type,is_video,caption,likes.summary(total_count),comments.summary(total_count),created_time,thumbnail_url,sidecar_items{is_video,display_url}', $access_token);
+            $posts = $response->getGraphEdge()->asArray();
+
+            // Get the posts statistics
+            $response = $fb->get('/' . $name . '/insights?metric=engagement,impressions', $access_token);
+            $postsStatistics = $response->getGraphEdge()->asArray();
+
+            // Combine all the data into a single array
+            $data = [
+                'user-info' => $userInfo,
+                'highlights' => $highlights,
+                'last-stories' => $lastStories,
+                'posts' => $posts,
+                'posts-statistics' => $postsStatistics,
+            ];
+
+            return $data;
+        } catch (Facebook\Exceptions\FacebookResponseException $e) {
+            // Handle Facebook API errors
+            return response()->json(['error' => $e->getMessage()], 500);
+        } catch (Facebook\Exceptions\FacebookSDKException $e) {
+            // Handle SDK errors
+            return response()->json(['error' => $e->getMessage()], 500);
+        }
+    }
+
     function index(Request $request)
     {
-        $accessToken = env('YOUR_ACCESS_TOKEN', 'YOUR_ACCESS_TOKEN');
-
-        // $userInfo = Http::get("https://graph.facebook.com/{$request->id}", [
-        //     'access_token' => $accessToken,
-        //     'fields' => 'id,name,email,profile_picture'
-        // ])->json();
-
-        // $posts = Http::get('https://graph.facebook.com/{$request->id}/posts', [
-        //     'access_token' => $accessToken,
-        // ])->json();
-        
-        // // Retrieve user's highlights
-        // $highlights = Http::get('https://graph.facebook.com/{$request->id}/highlights', [
-        //     'access_token' => $accessToken,
-        // ])->json();
-
-        // $response = Http::get("https://graph.facebook.com/v13.0/{$userId}/friends", [
-        //     'access_token' => $accessToken,
-        // ]);
-        // $friendCount = $response->json()['summary']['total_count'];
-
-        // $response = Http::get("https://graph.facebook.com/{$userId}/followers", [
-        //     'access_token' => $userAccessToken,
-        // ]);
-        // $followerCount = $response->json()['summary']['total_count'];
-
+        $data = $this->getFacebookInfo($request->id);
+        dd($data);
         /*
         const x = {
             "user-info": {
@@ -88,6 +120,11 @@ class ProfileCtr extends Controller
             },
         };
         */
+        $user_info = $data['user-info'];
+        $highlights = $data['highlights'];
+        $last_stories = $data['last-stories'];
+        $posts = $data['posts'];
+        $posts_statistics = $data['posts-statistics'];
 
         $user_info = json_decode('{"id":427553890,"username":"leomessi","fullName":"Leo Messi","profilePicUrl":"aHR0cHM6Ly9zY29udGVudC1sY3kxLTEuY2RuaW5zdGFncmFtLmNvbS92L3Q1MS4yODg1LTE5LzQzODE4MTQwXzIxMTYwMTg4MzE3NjM1MzJfMzgwMzAzMzk2MTA5ODExNzEyMF9uLmpwZz9zdHA9ZHN0LWpwZ19zMzIweDMyMCZfbmNfaHQ9c2NvbnRlbnQtbGN5MS0xLmNkbmluc3RhZ3JhbS5jb20mX25jX2NhdD0xJl9uY19vaGM9cHJNZ182Yl81d2NBWDhBdUhrRSZlZG09QU9RMWMwd0JBQUFBJmNjYj03LTUmb2g9MDBfQWZEazIxWThEdG5FNWo0ZGhuQjFYY2Q2dUI2Q3dtYVVtY2d6UmoydVk4c0lMZyZvZT02NTA1Mzk3MiZfbmNfc2lkPThiMzU0Ng==","biography":"Bienvenidos a la cuenta oficial de Instagram de Leo Messi \/ Welcome to the official Leo Messi Instagram account","followsCount":300,"followedByCount":487035264,"mediaCount":1098,"isPrivate":false}', true);
         $highlights = json_decode('[{"id":"18056801944028464","title":"Selecci\u00f3n","imageThumbnail":"aHR0cHM6Ly9zY29udGVudC1vdHAxLTEuY2RuaW5zdGFncmFtLmNvbS92L3Q1MS4xMjQ0Mi0xNS8yOTA4NzYwNl8xMjY1OTUyMTQ4NDU5MDhfNjQwNjM4Mjg5MDk3OTk1MDU5Ml9uLmpwZz9zdHA9YzAuMzk4LjEwMjQuMTAyNGFfZHN0LWpwZ19lMzVfczE1MHgxNTAmX25jX2h0PXNjb250ZW50LW90cDEtMS5jZG5pbnN0YWdyYW0uY29tJl9uY19jYXQ9MSZfbmNfb2hjPTVwUW1zMFJCSUtnQVgtUXlHRUQmZWRtPUFHVzBYZTRCQUFBQSZjY2I9Ny01Jm9oPTAwX0FmQTRMUmJTak9TNUtVSmRlSDlUR2QzRmhTc1dFNjg3UlNjX3p4VGt4b0ZaNmcmb2U9NjUwMUIwNzcmX25jX3NpZD05NGZlYTE="},{"id":"17975504626244610","title":"FCB","imageThumbnail":"aHR0cHM6Ly9zY29udGVudC1vdHAxLTEuY2RuaW5zdGFncmFtLmNvbS92L3Q1MS4xMjQ0Mi0xNS80OTg1ODMxOF8yNDE4NjM2Nzg0ODc3MTk1XzY5MTU0OTgwMzY4NjEzNDI1MjBfbi5qcGc\/c3RwPWMwLjM5OC4xMDI0LjEwMjRhX2RzdC1qcGdfZTM1X3MxNTB4MTUwJl9uY19odD1zY29udGVudC1vdHAxLTEuY2RuaW5zdGFncmFtLmNvbSZfbmNfY2F0PTEmX25jX29oYz1kMHlQUEQ2enlFY0FYX3FzSDNKJmVkbT1BR1cwWGU0QkFBQUEmY2NiPTctNSZvaD0wMF9BZkFkYlZibDdVNVFNQ1dBeFdhOFc3T29UdXVsTEhUQTRyZDB0MExWNXBsZlpBJm9lPTY1MDFCMjg3Jl9uY19zaWQ9OTRmZWEx"},{"id":"17968154899198063","title":"Familia","imageThumbnail":"aHR0cHM6Ly9zY29udGVudC1vdHAxLTEuY2RuaW5zdGFncmFtLmNvbS92L3Q1MS4xMjQ0Mi0xNS80Njk3OTIxM185NTA5NjkwNDg0MzQ1MzhfNjE4MjEzNjkzMzE4NzM5NDIwM19uLmpwZz9zdHA9YzAuNDIwLjEwODAuMTA4MGFfZHN0LWpwZ19lMzVfczE1MHgxNTAmX25jX2h0PXNjb250ZW50LW90cDEtMS5jZG5pbnN0YWdyYW0uY29tJl9uY19jYXQ9MSZfbmNfb2hjPWtobllmY0xmOF9JQVg4blZCdVgmZWRtPUFHVzBYZTRCQUFBQSZjY2I9Ny01Jm9oPTAwX0FmRENoZjhqdFZJUWJNSnNGM1ZvRWxSaFJKZkM0dTR5N1BldmhuOXRzMTM3bncmb2U9NjUwMTVCQzMmX25jX3NpZD05NGZlYTE="}]', true);
