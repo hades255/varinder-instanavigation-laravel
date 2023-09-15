@@ -1,66 +1,92 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
-
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+# Instanavigation
+### Anonymous story viewing on Instagram
+<p style="background-color: white; color: darkblue; font-weight: bold; padding: 20px; border-radius: 20px">
+Staying up to date on all events on Instagram while maintaining anonymity has never been easier. InstaNavigation offers a simple and free way to stay informed about events on Instagram while keeping your identity private. The service lets you follow a particular user without them being aware of it, allowing you to stay updated on interesting news and download relevant content as well.
 </p>
 
-## About Laravel
+## Features
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+The main feature of our service is absolute and complete anonymity. Want to watch Stories? Please do. Want to download videos and photos? No problem. Want to see who left likes and comments under posts? That information will also be available.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Another feature of InstaNavigation is that you don't need to first log into your account, provide a password, and then set up an anonymous mode to use the service. It's much simpler, all you need to do is specify the user name of the person you're interested in in a certain field. This is a convenient and well-thought-out approach.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+On the one hand, it serves as an additional security measure, as if you don't enter any data, you don't have to worry about it being disclosed. On the other hand, it allows users who are not registered on Instagram to also view interesting pages on the social network.
 
-## Learning Laravel
+<div style="display: flex;">
+    <div style="width: 50%">
+        <img src="./public/ss/Screenshot_2.png" alt="screenshot" />
+    </div>
+    <div style="width: 50%;">
+        <div style="display: flex;">
+            <div style="width: 50%">
+                <img src="./public/ss/Screenshot_1.png" alt="screenshot" />
+            </div>
+            <div style="width: 50%; display: flex;">
+                <img src="./public/ss/Screenshot_3.png" alt="screenshot" />
+            </div>
+        </div>
+        <div style="display: flex;">
+            <div style="width: 50%">
+                <img src="./public/ss/Screenshot_9.png" alt="screenshot" />
+            </div>
+            <div style="width: 50%; display: flex;">
+                <img src="./public/ss/Screenshot_4.png" alt="screenshot" />
+            </div>
+        </div>
+    </div>
+</div>
+<i>Modern Dark Theme</i>
+<div style="display: flex;">
+    <div style="width: 50%">
+        <img src="./public/ss/Screenshot_8.png" alt="screenshot" />
+    </div>
+    <div style="width: 50%;">
+        <div style="display: flex;">
+            <div style="width: 50%">
+                <img src="./public/ss/Screenshot_5.png" alt="screenshot" />
+            </div>
+            <div style="width: 50%; display: flex;">
+                <img src="./public/ss/Screenshot_6.png" alt="screenshot" />
+            </div>
+        </div>
+        <div style="display: flex;">
+            <div style="width: 50%">
+                <img src="./public/ss/Screenshot_7.png" alt="screenshot" />
+            </div>
+            <div style="width: 50%; display: flex;">
+                <img src="./public/ss/Screenshot_10.png" alt="screenshot" />
+            </div>
+        </div>
+    </div>
+</div>
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Set up
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+<br/>
+<span style="color: darkred; background-color: grey; margin: 10px; padding: 20px">
+* PHP ^8.0 / Laravel ^10.0
+</span>
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+<br/>
 
-## Laravel Sponsors
+```
+git clone https://github.com/hades255/varinder-instanavigation-laravel.git
+```
+```
+composer install
+```
+```
+php artisan serve
+```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+## Sponser
 
-### Premium Partners
+<a href="https://github.com/hades255">
+<img src="./public/ss/c1HDptGB-tqWNfMo7bF9mAWu1JlnWRCRToZvVWcG38CCsTstdGIBfe-JmsFFkIpw8x.webp" alt="hades" style="height: 70px" /> 
+<img src="./public/ss/Screenshot_11.png" alt="hades" style="height: 70px" /> 
+<br/>
+Varinder Pal Singh
+</a>
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### HADES
+<a href="https://github.com/hades255"><img src="./public/ss/hades.png" alt="hades" style="background-color: white; width: 50px; border-radius: 50%" /></a>
