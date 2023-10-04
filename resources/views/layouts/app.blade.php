@@ -75,6 +75,7 @@
         window.yaContextCb = window.yaContextCb || [];
     </script>
     <script src="{{ asset('ads/system/context.js') }}" async></script>
+    {{-- <title>@yield('title')</title> --}}
     <title>@yield('title')</title>
 
     @stack('style')
